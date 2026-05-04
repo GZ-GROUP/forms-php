@@ -1,0 +1,55 @@
+/* ============================================================
+   Custom DaisyUI Theme — "customTheme"
+   Uses the official CSS-variable pattern:
+   https://daisyui.com/docs/themes/#-5
+   ============================================================ */
+
+:root:has(input.theme-controller[value=customTheme]:checked),
+[data-theme="customTheme"] {
+  color-scheme: light;
+
+  /* ── Primary — Blue ── */
+  --color-primary:         oklch(from #2563EB l c h);
+  --color-primary-content: oklch(from #FFFFFF l c h);
+
+  /* ── Secondary — Cyan ── */
+  --color-secondary:         oklch(from #22D3EE l c h);
+  --color-secondary-content: oklch(14% 0.04 240);
+
+  /* ── Accent — Cyan (same as secondary) ── */
+  --color-accent:         oklch(from #22D3EE l c h);
+  --color-accent-content: oklch(14% 0.04 240);
+
+  /* ── Neutral ── */
+  --color-neutral:         oklch(20% 0.03 240);
+  --color-neutral-content: oklch(from #FFFFFF l c h);
+
+  /* ── Base surfaces ── */
+  --color-base-100: oklch(from #FFFFFF l c h);   /* white — cards, modals    */
+  --color-base-200: oklch(97% 0.01 240);          /* faint blue tint — hero   */
+  --color-base-300: oklch(92% 0.03 240);          /* light blue — borders     */
+  --color-base-content: oklch(20% 0.03 240);      /* near-black text          */
+
+  /* ── Semantic ── */
+  --color-info:    oklch(from #22D3EE l c h);
+  --color-success: oklch(50% 0.15 145);
+  --color-warning: oklch(75% 0.18 85);
+  --color-error:   oklch(55% 0.22 25);
+
+  /* ── Shape ── */
+  --radius-box:    0.5rem;
+  --radius-field:  0.375rem;
+  --radius-badge:  999px;
+}
+
+/* ============================================================
+   Typography
+   ============================================================ */
+
+h1, h2, h3, h4, .font-display {
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+body, p, label, input, button, td, th, span, li {
+    font-family: 'Clear Sans', 'Trebuchet MS', sans-serif;
+}
