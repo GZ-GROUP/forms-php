@@ -27,10 +27,7 @@
                         <span id="page-indicator" class="text-sm text-base-content/50">1 / 3</span>
                     </div>
  
-                    <div class="join grid grid-cols-2">
-                        <button id="btn-prev" class="join-item btn btn-outline" onclick="changePage(-1)" disabled>Anterior</button>
-                        <button id="btn-next" class="join-item btn btn-outline" onclick="changePage(1)">Siguiente</button>
-                    </div>
+                    
  
                 </div>              
             </div>
