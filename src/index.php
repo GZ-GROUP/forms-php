@@ -20,53 +20,20 @@
             <div class="max-w-md">
                 <div class="flex w-full flex-col">
  
-                    <!-- Page content: 3 skeleton pages -->
-                    <div id="page-1" class="page-content">
-                        <div class="skeleton h-80 w-100"></div>
-                    </div>
-                    <div id="page-2" class="page-content hidden">
-                        <div class="skeleton h-80 w-100"></div>
-                    </div>
-                    <div id="page-3" class="page-content hidden">
-                        <div class="skeleton h-80 w-100"></div>
-                    </div>
+                    <div class="skeleton h-80 w-100"></div>
  
                     <div class="divider">
                         <span id="page-indicator" class="text-sm text-base-content/50">1 / 3</span>
                     </div>
  
-                    <div class="join grid grid-cols-2">
-                        <button id="btn-prev" class="join-item btn btn-outline" onclick="changePage(-1)" disabled>Anterior</button>
-                        <button id="btn-next" class="join-item btn btn-outline" onclick="changePage(1)">Siguiente</button>
-                    </div>
+                    
  
                 </div>              
             </div>
         </div>
     </div>
  
-    <script>
-        const TOTAL_PAGES = 3;
-        let currentPage = 1;
- 
-        function changePage(direction) {
-            // Hide current page
-            document.getElementById(`page-${currentPage}`).classList.add('hidden');
- 
-            // Update page index
-            currentPage += direction;
- 
-            // Show new page
-            document.getElementById(`page-${currentPage}`).classList.remove('hidden');
- 
-            // Update indicator
-            document.getElementById('page-indicator').textContent = `${currentPage} / ${TOTAL_PAGES}`;
- 
-            // Update button states
-            document.getElementById('btn-prev').disabled = currentPage === 1;
-            document.getElementById('btn-next').disabled = currentPage === TOTAL_PAGES;
-        }
-    </script>
+    
 </body>
 
 </html>
