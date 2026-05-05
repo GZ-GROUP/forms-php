@@ -34,28 +34,7 @@
         </div>
     </div>
  
-    <script>
-        const TOTAL_PAGES = 3;
-        let currentPage = 1;
- 
-        function changePage(direction) {
-            // Hide current page
-            document.getElementById(`page-${currentPage}`).classList.add('hidden');
- 
-            // Update page index
-            currentPage += direction;
- 
-            // Show new page
-            document.getElementById(`page-${currentPage}`).classList.remove('hidden');
- 
-            // Update indicator
-            document.getElementById('page-indicator').textContent = `${currentPage} / ${TOTAL_PAGES}`;
- 
-            // Update button states
-            document.getElementById('btn-prev').disabled = currentPage === 1;
-            document.getElementById('btn-next').disabled = currentPage === TOTAL_PAGES;
-        }
-    </script>
+    
 </body>
 
 </html>
