@@ -20,16 +20,8 @@
             <div class="max-w-md">
                 <div class="flex w-full flex-col">
  
-                    <!-- Page content: 3 skeleton pages -->
-                    <div id="page-1" class="page-content">
-                        <div class="skeleton h-80 w-100"></div>
-                    </div>
-                    <div id="page-2" class="page-content hidden">
-                        <div class="skeleton h-80 w-100"></div>
-                    </div>
-                    <div id="page-3" class="page-content hidden">
-                        <div class="skeleton h-80 w-100"></div>
-                    </div>
+                    <div class="skeleton h-80 w-100"></div>
+                    
  
                     <div class="divider">
                         <span id="page-indicator" class="text-sm text-base-content/50">1 / 3</span>
