@@ -20,11 +20,28 @@
             <div class="max-w-md">
                 <div class="flex w-full flex-col">
  
+<<<<<<< HEAD
                     <div class="skeleton h-80 w-100"></div>
                     
+=======
+                    <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+                        <legend class="fieldset-legend">Inicar Sesión</legend>
+
+                        <label class="label">Correo</label>
+                        <input type="email" class="input" placeholder="Correo" />
+
+                        <label class="label">Contraseña</label>
+                        <input type="password" class="input" placeholder="Contraseña" />
+
+                        <button class="btn btn-neutral mt-4">Ingresar</button>
+                        <a href="register.php" class="link link-primary">
+                            ¿No tienes una cuenta? Registrate
+                        </a>
+                    </fieldset>
+>>>>>>> f7ae4c5dd07484f3e38d0b7d29ff8113e49ccc29
  
                     <div class="divider">
-                        <span id="page-indicator" class="text-sm text-base-content/50">1 / 3</span>
+                        <span class="text-sm text-base-content/50"></span>
                     </div>
  
                     
