@@ -4,30 +4,40 @@ services:
   app:
     build: .
     container_name: php_app
+    restart: unless-stopped
     ports:
       - "8080:80"
     env_file:
       - .env
     depends_on:
-      - db
+      db:
+        condition: service_healthy   # Espera a que Postgres esté listo
     networks:
       - app-network
 
   db:
-    image: postgres:15
+    image: postgres:15-alpine
     container_name: postgres_db
     restart: always
     environment:
-      POSTGRES_DB: utp_forms
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB:       ${DB_NAME:-utp_forms}
+      POSTGRES_USER:     ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
     volumes:
       - pgdata:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro   # Crea tabla al inicio
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-postgres} -d ${DB_NAME:-utp_forms}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
     networks:
       - app-network
 
 volumes:
   pgdata:
+    driver: local
 
 networks:
   app-network:
+    driver: bridge
